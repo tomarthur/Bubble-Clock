@@ -8,6 +8,7 @@
   makes use of 
   LiquidCrystal Library & example code
   Time.h Library & example code
+  Blink M Library
 
  
  */
