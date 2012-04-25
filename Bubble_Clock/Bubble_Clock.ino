@@ -1,5 +1,5 @@
 /*
-  BubbleClock_0.7
+  BubbleClock_0.8
   Tom Arthur
   tom.arthur@mac.com
   http://howtomworks.com
@@ -225,8 +225,8 @@ void alarmCheck() {
 }
 
 void MainAlarm () {
- while (alarmActive = true) {
-   if (timeout > 5000){ // shuts off alarm with button
+ while (alarmActive == true) {
+   if (timeout > 4000){ // shuts off alarm with button
     alarmStopped = true;
     alarmReset ();
     break;
@@ -236,6 +236,12 @@ void MainAlarm () {
     alarmReset ();
     break;
     } 
+   else if (alarmActive == false)
+   {
+     alarmStopped = true;
+     alarmReset ();
+     break
+   }
    digitalWrite(bubbleMotor, HIGH); // activate bubble maker
    startColors ();
    alarmLCDprint ();
